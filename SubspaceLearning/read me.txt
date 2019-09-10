@@ -1,0 +1,58 @@
+The databases and codes are provided to reproduce the results reported in our AAAI15 Paper [1] and its extension [2]. 
+
+If you want to conduct experiments using the data sets that are not uploaded in the dropbox (due to space limitation), pls feel free to contact with me via pangsaai@gmail.com.
+
+% =========================================================================
+% An example code for the algorithm proposed in
+
+   [1] Xi Peng, Zhang Yi, and Huajin Tang.
+       Robust Subspace Clustering via Thresholding Ridge Regression.
+       The Twenty-Ninth AAAI Conference on Artificial Intelligence (AAAI), Austin, Texas, USA, January 2529, 2015.
+
+   [2] Xi Peng, Zhiding Yu, Zhang Yi, and Huajin Tang.
+       Constructing the L2-Graph for Robust Subspace Learning and Subspace Clustering.
+       IEEE Trans. on Cybernetics, In Press.
+
+% Written by Xi Peng @ I2R A*STAR
+% Dec., 2014.
+% More information can be accessed from www.pengxi.me
+% =========================================================================
+
+If you would like to reproduce the result, please assign the parameters with the value reported in the paper, otherwise, specify some possible values for the parameters.
+
+If you used the codes or data sets, please approximately cite our works.
+
+
+========================Configuration========================
+---The codes were produced in MATLAB2012a 64 bit. 
+
+-The Accuracy and NMI may fluctuate in the range of [-1% 1%] owing to the effects of k-means clustering method.
+
+-If have any problem, welcome to contact with me via pangsaai[at][dot]gmail[dot]com
+
+
+========================Data========================
+Some used data sets. 
+
+
+======================== usages ========================
+Some codes sharing by the tested methods.
+1. accuracy.m: calculate the clustering Accuracy of the tested method;
+2. nmi.m: calculate the NMI of the tested method;
+3. CalMetricOfCluster.m: compute the clustering quality of the tested method;
+4. BuildAdjacency.m: build a graph using $k$-nearest neighbors;
+5. Eigenface_f.m and FeatureEx.m: reduce the dim. of the data using PCA;
+6. hungarian.m: best map between predict label and ground truth;
+7. litekmeans.m: k-means clustering algorithm;
+8. SC.m: normalized spectral clustering algorithm.
+
+
+========================L2-Graph========================
+The implementation of our method, i.e., Thresholding Ridge Regression. 
+
+1. L2Graph_ImgClustering_main.m: the main file of L2-Graph for image clustering (i.e., TRR in [1]), please set the parameters in this file;
+2. ClusteringL2Graph.m: encode and cluster the given data set by L2-Graph (i.e., TRR).
+3. AnalyzeResult_L2_ImgClustering.m: As the name implies, run it to analyze the result of TRR with different parameter combinations.
+
+4. L2Graph_MotionSeg_main.m: the main file of L2-Graph for moton segmentation, please set the parameters in this file;
+5. AnalyzeResult_L2_MotionSeg.m: As the name implies, run it to analyze the result of TRR with different parameter combinations.
